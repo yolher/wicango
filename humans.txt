@@ -1,0 +1,41 @@
+﻿/* TEAM */  
+HALLTEC
+
+Developer Backend : Oscar Manuel Aguillon Silva
+Email Developer: aguillon_@hotmail.com
+Phone: 318 410 9181
+Twitter: @oaguillon
+From: San Gil, Santander, Colombia
+
+Developer forntend : Yolher Camilo Albeiro Hernandez Reyes
+Email Developer: yocahe5@gmail.com
+Phone: 317 569 6301
+Twitter: @yolhercamilo
+From: San Gil, Santander, Colombia
+  
+Media Queries by: Yolher Camilo Albeiro Hernandez Reyes (@yolhercamilo)
+
+/* THANKS */
+
+	Collaborator: Nestor Suarez
+	Email: nestorfox@hotmail.com
+	Phone: 321 234 8070
+	Twitter: @MALAGAVIVE
+	From: San Gil, Santander, Colombia
+		
+
+/* SITE */
+Site-name: Inmobiliaria Santa Cruz - Solidez y Cumplimiento
+CreationDate: 01/03/2013
+Doctype:html-php-css-js-jQuery
+Descirption Site: 
+	-Pagina principal con mensaje de bienvenida y buscador de inmuebles
+	-Quienes Somos
+	-Arriendos
+	-Ventas
+	-Remodelaciones
+
+Language:Castellano
+Copyright: halltec©2013
+License: Halltec
+Version: 1.0.0
