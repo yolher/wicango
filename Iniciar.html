@@ -20,6 +20,7 @@
 <d  <div data-role="page">
         
         <div data-role="header" class="hea">
+            <div id="back"><a href=""  data-role="button" data-rel="back">BACK</a> </div>
             <div id="boton">
             <a href="#myPanel"><img src="images/home2.png" alt=""></a>
             </div>
@@ -27,23 +28,26 @@
         <div data-role="panel" id="myPanel"  data-display="push">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="iniciar.html" data-transition="slide">Iniciar sesión</a></li>
-                <li><a href="feedback.html" data-transition="slide">Feedback</a></li>
+                <li><a href="Iniciar.html">Iniciar sesión</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
                 <li> <a href="">Politicas y Condiciones</a></li>   
             </ul>
             </div>
         <div data-role="content">
-            <div id="contbus">
-           <input id="into" type="text" placeholder="Que desea buscar?">
-           </div>
-           <div class="resultado"></div>
+            <div class="sesion">
+             <h1>Iniciar Sesion</h1>   
+            <span>Usuario</span>
+            <input id="usuario" type="text" placeholder="Nombre">
+            <span>Contrasena</span>
+            <input id="pass" type="text" placeholder="XXXXXX">
+            </div>
+          
         </div><!-- /content -->
-         
-        </div>   
+ 
         <div data-role="footer">
-            <h1>footer</h1>
+            <h4>My Footer</h4>
         </div><!-- /footer -->
-        
+ 
     </div><!-- /page -->
 </body>
 </html>
