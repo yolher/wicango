@@ -18,11 +18,20 @@
 </head>
 <body>
 <d  <div data-role="page">
- 
+        
         <div data-role="header">
-            <h1>My Title</h1>
+            <div id="boton">
+            <a href="#mypanel"><img src="images/home2.png" alt=""></a>
+            </div>
         </div><!-- /header -->
- 
+        <div data-role="panel" id="mypanel"  data-display="push">
+            <ul>
+                <li>Home</li>
+                <li>Iniciar sesión</li>
+                <li>Feedback</li> 
+                <li>Politicas y Condiciones</li>   
+            </ul>
+            </div>
         <div data-role="content">
             <div id="contbus">
            <input id="into" type="text" placeholder="Que desea buscar?">

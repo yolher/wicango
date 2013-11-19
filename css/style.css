@@ -1,3 +1,23 @@
+/* estilos para el header*/
+#boton
+{
+	width: 3%;
+	padding: 5px;
+	border: 0px solid;
+}
+/*estilos panel-menu*/
+#mypanel ul 
+{
+	border: 1px solid;
+	padding: 0px;
+	list-style: none;
+}
+#mypanel ul li
+{
+	border: 1px solid #c1c1c1;
+}
+
+/* estilos para el contedor*/
 #contbus
 {
 	width: 50%;
