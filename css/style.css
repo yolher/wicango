@@ -1,0 +1,29 @@
+#contbus
+{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+#into
+{
+	height: 35px;
+}
+.resultado
+{
+	width: 48%;
+	height: 300px;
+	border: 1px solid #c1c1c1;
+	display: inline-block;
+}
+
+
+/*media queris*/
+
+@media screen and (max-width: 800px){
+      .resultado{
+      	width: 100%;
+      }
+      #contbus{
+      	width: 100%;
+      }
+    }
