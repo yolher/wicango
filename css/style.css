@@ -222,15 +222,36 @@ textarea.ui-input-text
 		   
 		}
 }
-@media screen and (max-width: 400px){    
-	#sesion
+@media screen and (max-width: 450px){ 
+	.sesion
 		{
-			width: 90%;
+			width: 98%;
+			height: 250px;
+			padding-top: 20px;
+			
 		}
+		.sesion h1
+		{
+			margin-bottom: 10px;
+		}
+
+		textarea.ui-input-text
+		{
+			height: 70px;
+		}
+		#contpoli
+		{
+			padding: 5px;
+			width: 98%;
+		}
+}	
+@media screen and (max-width: 400px){    
+	
 		.sesion h1
 		{
 			font-size: 25px;
 		}
 }
+	
 
 

@@ -1,5 +1,5 @@
 //var urlRequest = "http://imagineriaweb.com/wicango/";//url del domino donde se aloja la informacion
-var urlRequest = "http://wicango.local/";//url del domino donde se aloja la informacion
+var urlRequest = "http://imagineriaweb.com/wicango/";//url del domino donde se aloja la informacion
 var urlProcess = urlRequest+"server/process.php";//ruta de directorio donde se hace la peticion al servidor
 
 //function getSearch
