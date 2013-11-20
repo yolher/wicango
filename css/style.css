@@ -1,21 +1,66 @@
+@font-face{
+	font-family: helveticaio;
+	src:url(../fonts/helvetica-io7-webfont.otf);
+	src:url(../fonts/helvetica-io7-webfont.ttf);
+	src:url(../fonts/helvetica-io7-webfont.eot);
+	src:url(../fonts/helvetica-io7-webfont.woff);
+}
 /* estilos para el header*/
+.hea
+{
+	background: #1b3647 !important;
+}
+header, .ui-mobile .ui-footer {
+	background: #1b3647 !important;
+}	
 #boton
 {
 	width: 3%;
-	padding: 5px;
+	padding: 7px;
 	border: 0px solid;
 }
-/*estilos panel-menu*/
-#mypanel ul 
+#back
 {
-	border: 1px solid;
+	float: right;
+}
+/*estilos panel-menu*/
+#myPanel
+{
+ 
+}
+#myPanel ul 
+{
+	margin-top: 50px;
+	border: 0px solid;
 	padding: 0px;
 	list-style: none;
 }
-#mypanel ul li
+#myPanel ul li
 {
-	border: 1px solid #c1c1c1;
+	
+	font-family: helveticaio;
+	margin-top:2px;
+	border-bottom: 1px solid #c1c1c1;
+	
 }
+#myPanel ul li:hover
+{
+	background: #2489ce;
+	
+}
+#myPanel ul li a
+{
+	padding: 10px;
+	border: 0px solid;
+	text-decoration: none;
+	display: block;
+	color: #969191;
+	background: url(../images/ir.png) no-repeat 100% 14px;
+}
+#myPanel ul li a:hover
+{
+	color: #fff;
+}	
 
 /* estilos para el contedor*/
 #contbus
@@ -35,6 +80,35 @@
 	border: 1px solid #c1c1c1;
 	display: inline-block;
 }
+/*estilos content, iniciar.html*/
+.sesion
+{
+	width: 80%;
+	margin: auto;
+	height: 500px;
+	background: #1691be;
+	font-family: helveticaio;
+}
+.sesion h1
+{
+	color: #fff;
+	width: 51%;
+	margin: auto;
+	margin-bottom: 70px;
+	border: 0px solid;
+}
+.sesion span
+{
+	
+	color: #fff;
+	width: 51%;
+	border: 0px solid;
+	display: block;
+	margin:auto;
+	margin-top: 20px;
+	font-weight: bold;
+}
+
 
 
 /*media queris*/
@@ -46,4 +120,16 @@
       #contbus{
       	width: 100%;
       }
+      #sesion
+		{
+			width: 70%;
+		}
+
     }
+
+@media screen and (max-width: 400px){    
+	#sesion
+		{
+			width: 90%;
+		}
+}
