@@ -21,8 +21,10 @@ class select{
             	if ($resultado = mysqli_query($enlace, $sql)) {
             	
 	            	while($obj = mysqli_fetch_object($resultado)){
-	            		$link =  str_replace(" ","-",$obj->name_entry)."-entrada-".$obj->id_entry.".html";	//construccion de url amigable
-	            		$qrCode = "http://www.codigos-qr.com/qr/php/qr_img.php?d=".$urlRequest.$link."&s=14&e=";
+	            		// construccion de url amigable
+	            		$link =  str_replace(" ","-",$obj->name_entry)."-entrada-".$obj->id_entry.".html";
+	            		// generacion de codigo qr apartir del link o direccion generado
+	            		$qrCode = "http://www.codigos-qr.com/qr/php/qr_img.php?d=".$urlRequest.$link."&s=14&e="; 
 
 	            		// almacena los valotes de la base de datos en un array
 	            		$arr[] = array(
@@ -51,9 +53,6 @@ class select{
             	// si no existen resultados de la consulta
             	echo json_encode($SearchAlert);
             }
-
-
-
 		}
 
 	}
