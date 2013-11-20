@@ -73,10 +73,10 @@ header, .ui-mobile .ui-footer {
 {
 	height: 35px;
 }
-.resultado
+#resultado
 {
 	width: 48%;
-	height: 300px;
+	min-height: 300px;
 	border: 1px solid #c1c1c1;
 	display: inline-block;
 }
