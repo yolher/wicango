@@ -20,7 +20,7 @@
 <d  <div data-role="page">
         
         <div data-role="header" class="hea">
-            <div id="back"><a href=""  data-role="button" data-rel="back">BACK</a> </div>
+            <div class="back"><a href=""  data-role="button" data-rel="back">BACK</a> </div>
             <div id="boton">
             <a href="#myPanel"><img src="images/home2.png" alt=""></a>
             </div>
@@ -30,16 +30,19 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Iniciar.html">Iniciar sesión</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
-                <li> <a href="">Politicas y Condiciones</a></li>   
+                <li> <a href="policondi.html">Politicas y Condiciones</a></li>   
             </ul>
             </div>
         <div data-role="content">
             <div class="sesion">
+            <div class="insesion">
              <h1>Feedback</h1>   
             <span>Asunto</span>
             <input id="asunto" type="text" placeholder="Nombre">
             <span>Comentario</span>
-            <input id="comentario" type="text" placeholder="XXXXXX">
+            <textarea id="comentario" name="comentario" required></textarea>
+            
+            </div>
             </div>
           
         </div><!-- /content -->

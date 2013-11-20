@@ -19,14 +19,14 @@ header, .ui-mobile .ui-footer {
 	padding: 7px;
 	border: 0px solid;
 }
-#back
+.back
 {
 	float: right;
 }
 /*estilos panel-menu*/
 #myPanel
 {
- 
+  background: #1b3647;
 }
 #myPanel ul 
 {
@@ -45,7 +45,7 @@ header, .ui-mobile .ui-footer {
 }
 #myPanel ul li:hover
 {
-	background: #2489ce;
+	background: #166ba2;
 	
 }
 #myPanel ul li a
@@ -54,7 +54,7 @@ header, .ui-mobile .ui-footer {
 	border: 0px solid;
 	text-decoration: none;
 	display: block;
-	color: #969191;
+	color: #fff;
 	background: url(../images/ir.png) no-repeat 100% 14px;
 }
 #myPanel ul li a:hover
@@ -85,31 +85,63 @@ header, .ui-mobile .ui-footer {
 {
 	width: 80%;
 	margin: auto;
-	height: 500px;
-	background: #1691be;
+	height: 450px;
+	border: 1px solid #166ba2;
+	background: #e9eaed;
+	padding-top: 50px;
 	font-family: helveticaio;
+
 }
 .sesion h1
 {
-	color: #fff;
-	width: 51%;
+	color: #e9931a;
+	width: 100%;
 	margin: auto;
 	margin-bottom: 70px;
 	border: 0px solid;
 }
 .sesion span
-{
-	
-	color: #fff;
-	width: 51%;
+{	
+	color: #e9931a;
+	width: 100%;
 	border: 0px solid;
 	display: block;
 	margin:auto;
 	margin-top: 20px;
 	font-weight: bold;
 }
+.insesion
+{
+	width: 50%;
+	margin: auto;
+	height: 500px;
+	border: 0px solid;
+   
+}
+/*estilos feedback.html*/
+textarea.ui-input-text
+{
+	width: 100%;
+	max-width: 100%;
+	height: 200px;
+	max-height: 200px;
+	
+}
 
-
+/*estilos content, policondi.html*/
+#contpoli
+{
+	width: 70%;
+	padding: 20px;
+	margin: auto;
+	border: 1px solid #166ba2;
+	background: #e9eaed;
+}
+#contpoli h1 
+{
+	font-family:  helveticaio;
+	color: #e9931a
+}
 
 /*media queris*/
 
@@ -126,10 +158,22 @@ header, .ui-mobile .ui-footer {
 		}
 
     }
-
+@media screen and (max-width: 700px){    
+		.insesion
+		{
+			width: 90%;
+		   
+		}
+}
 @media screen and (max-width: 400px){    
 	#sesion
 		{
 			width: 90%;
 		}
+		.sesion h1
+		{
+			font-size: 25px;
+		}
 }
+
+
