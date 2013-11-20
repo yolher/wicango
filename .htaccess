@@ -2,5 +2,5 @@ RewriteEngine On
 RewriteRule ^([a-zA-Z0-9_-]+)$ entrada.html?entrada=$1 [last]
 RewriteRule ^.*entrada-([0-9]+)\.html$ entrada.html?entrada=$1 [L]
 
-ErrorDocument 404 http://wicango.local/sorry.php
+ErrorDocument 404 http://wicango.local/sorry.html
 
