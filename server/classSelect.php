@@ -4,7 +4,7 @@ require_once('classConexion.php');
 class select{
 
 
-	public function getSearch($palabra){
+	public function getSearch($palabra,$urlRequest){
 	
 		$SearchAlert = array('error' => 'Su busqueda no produjo ningun resultado');//alerta del sistema, guarda un array para convertir en objeto json
 		$sql = "select * from app_entry where palabras_clave like '%".$palabra."%'";//guarda una consulta o sentencia sql
@@ -21,6 +21,9 @@ class select{
             	if ($resultado = mysqli_query($enlace, $sql)) {
             	
 	            	while($obj = mysqli_fetch_object($resultado)){
+	            		$link =  str_replace(" ","-",$obj->name_entry)."-entrada-".$obj->id_entry.".html";	//construccion de url amigable
+	            		$qrCode = "http://www.codigos-qr.com/qr/php/qr_img.php?d=".$urlRequest.$link."&s=14&e=";
+
 	            		// almacena los valotes de la base de datos en un array
 	            		$arr[] = array(
 	            				"name" => $obj->name_entry,
@@ -34,7 +37,8 @@ class select{
 	            				"hits" => $obj->numHits,
 	            				"thumb" => $obj->thumb_entry,
 	            				"gallery" => $obj->gallery_entry,
-	            				"qrCode" => $obj->qr_code
+	            				"qrCode" => $qrCode,
+	            				"url" => $link
 	            		);
 	            	}
 	            	// impirme los datos del array en formato json

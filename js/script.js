@@ -1,14 +1,14 @@
-var urlRequest = "http://imagineriaweb.com/wicango/";//url del domino donde se aloja la informacion
-//var urlRequest = "http://wicango.local/";//url del domino donde se aloja la informacion
+//var urlRequest = "http://imagineriaweb.com/wicango/";//url del domino donde se aloja la informacion
+var urlRequest = "http://wicango.local/";//url del domino donde se aloja la informacion
 var urlProcess = urlRequest+"server/process.php";//ruta de directorio donde se hace la peticion al servidor
 
 //function getSearch
 //====================================================================================
-function getSearch(search,urlProcess,key){
+function getSearch(search,urlProcess,urlRequest,key){
 	$.ajax({
 		beforeSend: function(){},
 		type: "get",
-		data: {search:search,key:key},
+		data: {search:search,key:key,urlRequest:urlRequest},
 		url: urlProcess,
 		success: function(data){
 			var data = JSON.parse(data);
@@ -19,7 +19,10 @@ function getSearch(search,urlProcess,key){
 				if (id == error) {
 					obj.push('<div class="messegeRed">'+item+'</div>');
 				}else{
-					obj.push('<div class="titulo">'+item.name+'</div>');
+					var titulo = '<div class="titulo"><a href="'+item.url+'" data-transition="slide">'+item.name+'</a></div>';
+					var tel = '<div class="telefono">Telefono: '+item.telefono+'</div>';
+					var cel ='<div class="celular">Celular: '+item.celular+'</div>'
+					obj.push('<div class="entrada">'+titulo+tel+cel+"</div>");
 				}								
 			});
 			$("#resultado").html(obj.join(""));
@@ -38,7 +41,7 @@ $(document).on("ready",function(){
 
 		console.log(search);
 
-			getSearch(search,urlProcess,key);
+			getSearch(search,urlProcess,urlRequest,key);
 	
 		
 

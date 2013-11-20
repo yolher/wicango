@@ -95,11 +95,34 @@ header, .ui-mobile .ui-footer {
 	display: none;
 }
 
-#resultado .titulo{
-	border: 1px solid #f00;
-	height: 32px;
+.entrada {
+	border-bottom: 1px solid #c1c1c1;
+	padding: 0px 10px 5px 10px;
+}
+.titulo{
 	line-height: 32px;
 }
+.titulo a{
+	font-size: 16px;
+	font-family: arial;
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+
+.telefono{
+	font-size: 14px;
+	font-family: arial;
+	color: #000;
+}
+
+.celular{
+	font-size: 14px;
+	font-family: arial;
+	color: #000;
+}
+
+/*=============================================================*/
 
 /* ============ estilos para los mensajes del servidor =========*/
 
@@ -113,7 +136,7 @@ background: #f00;
 font-family: arial;
 font-weight: normal;
 }
-
+/*=============================================================*/
 /*estilos content, iniciar.html*/
 .sesion
 {
@@ -180,7 +203,7 @@ textarea.ui-input-text
 /*media queris*/
 
 @media screen and (max-width: 800px){
-      .resultado{
+      #contResult{
       	width: 100%;
       }
       #contbus{
