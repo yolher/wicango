@@ -7,7 +7,7 @@ class select{
 	public function getSearch($palabra,$urlRequest){
 	
 		$SearchAlert = array('error' => 'Su busqueda no produjo ningun resultado');//alerta del sistema, guarda un array para convertir en objeto json
-		$sql = "select * from app_entry where palabras_clave like '%".$palabra."%'";//guarda una consulta o sentencia sql
+		$sql = "select * from app_entry where palabras_clave like '%".$palabra."%' || name_entry like '%".$palabra."%'";//guarda una consulta o sentencia sql
 		//guarda el objeto de conecion con la base de datos
 		$enlace = Conectar::con(); 
 
@@ -26,19 +26,19 @@ class select{
 
 	            		// almacena los valotes de la base de datos en un array
 	            		$arr[] = array(
-	            				"name" => $obj->name_entry,
+	            				"name" => utf8_encode($obj->name_entry),
 	            				"direccion" => $obj->direccion_entry,
 	            				"direccion_gmap" => $obj->direccion_google,
 	            				"telefono" => $obj->telefono_entry,
-	            				"correo" => $obj->correo_entry,
+	            				"correo" => utf8_encode($obj->correo_entry),
 	            				"celular" => $obj->celular_entry,
-	            				"web" => $obj->pagina_entry,
-	            				"descripcion" => $obj->desc_entry,
+	            				"web" => utf8_encode($obj->pagina_entry),
+	            				"descripcion" => utf8_encode($obj->desc_entry),
 	            				"hits" => $obj->numHits,
-	            				"thumb" => $obj->thumb_entry,
-	            				"gallery" => $obj->gallery_entry,
-	            				"qrCode" => $qrCode,
-	            				"url" => $link
+	            				"thumb" => utf8_encode($obj->thumb_entry),
+	            				"gallery" => utf8_encode($obj->gallery_entry),
+	            				"qrCode" => utf8_encode($qrCode),
+	            				"url" => utf8_encode($link)
 	            		);
 	            	}
 	            	// impirme los datos del array en formato json
@@ -59,7 +59,6 @@ class select{
 	}
 
 }
-
 
 
 ?>
