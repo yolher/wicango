@@ -1,14 +1,24 @@
 <?php 
+
 session_start();
 class Conectar
 {
 	public static function con()
 	{
-		 $conexion=mysql_connect("localhost","wicango_us","p33vpVwARncqhW7x");
-	    mysql_query("SET NAMES 'utf-8'");
-	    mysql_select_db("wicango_app");
+		$enlace = mysqli_connect("localhost","wicango_us","p33vpVwARncqhW7x","wicango_app");
 
-		return $conexion;
+
+
+		//mysql_query("SET NAMES 'utf-8'");
+
+		/* comprobar la conexión */
+		if (mysqli_connect_errno()) {
+		    printf("Falló la conexión: %s\n", mysqli_connect_error());
+		    exit();
+		}
+
+		return $enlace;
 	}
 }
+
 ?>
