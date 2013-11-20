@@ -37,6 +37,7 @@ class select{
 	            				"qrCode" => $obj->qr_code
 	            		);
 	            	}
+	            	// impirme los datos del array en formato json
 	            	echo '' . json_encode($arr) . '';
 	            	/* liberar el conjunto de resultados */
                 	mysqli_free_result($resultado);

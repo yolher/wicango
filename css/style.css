@@ -73,13 +73,47 @@ header, .ui-mobile .ui-footer {
 {
 	height: 35px;
 }
-#resultado
+
+/* =========== estilo para los resultados de la busqueda */
+#contResult
 {
 	width: 48%;
 	min-height: 300px;
 	border: 1px solid #c1c1c1;
 	display: inline-block;
 }
+
+.loading{
+	text-align: center;
+	height: 32px;
+	line-height: 32px;
+}
+
+.loading p{
+	margin: 0px;
+	padding: 0px;
+	display: none;
+}
+
+#resultado .titulo{
+	border: 1px solid #f00;
+	height: 32px;
+	line-height: 32px;
+}
+
+/* ============ estilos para los mensajes del servidor =========*/
+
+.messegeRed{
+	height: 32px;
+line-height: 32px;
+color: #fff;
+font-size: 14px;
+text-align: center;
+background: #f00;
+font-family: arial;
+font-weight: normal;
+}
+
 /*estilos content, iniciar.html*/
 .sesion
 {
