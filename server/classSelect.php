@@ -7,7 +7,7 @@ class select{
 	public function getSearch($palabra,$urlRequest){
 	
 		$SearchAlert = array('error' => 'Su busqueda no produjo ningun resultado');//alerta del sistema, guarda un array para convertir en objeto json
-		$sql = "select * from app_entry where palabras_clave like '%".$palabra."%' || name_entry like '%".$palabra."%'";//guarda una consulta o sentencia sql
+		$sql = "select id_entry,name_entry,direccion_entry,telefono_entry,correo_entry,celular_entry from app_entry where name_entry like '%".$palabra."%' || palabras_clave like '%".$palabra."%'";//guarda una consulta o sentencia sql
 		//guarda el objeto de conecion con la base de datos
 		$enlace = Conectar::con(); 
 
@@ -30,16 +30,16 @@ class select{
 	            		$arr[] = array(
 	            				"name" => utf8_encode($obj->name_entry),
 	            				"direccion" => $obj->direccion_entry,
-	            				"direccion_gmap" => $obj->direccion_google,
+	            				//"direccion_gmap" => $obj->direccion_google,
 	            				"telefono" => $obj->telefono_entry,
 	            				"correo" => utf8_encode($obj->correo_entry),
 	            				"celular" => $obj->celular_entry,
-	            				"web" => utf8_encode($obj->pagina_entry),
-	            				"descripcion" => utf8_encode($obj->desc_entry),
-	            				"hits" => $obj->numHits,
-	            				"thumb" => utf8_encode($obj->thumb_entry),
-	            				"gallery" => utf8_encode($obj->gallery_entry),
-	            				"qrCode" => utf8_encode($qrCode),
+	            				//"web" => utf8_encode($obj->pagina_entry),
+	            				//"descripcion" => utf8_encode($obj->desc_entry),
+	            				//"hits" => $obj->numHits,
+	            				//"thumb" => utf8_encode($obj->thumb_entry),
+	            				//"gallery" => utf8_encode($obj->gallery_entry),
+	            				//"qrCode" => utf8_encode($qrCode),
 	            				"url" => utf8_encode($link)
 	            		);
 	            	}

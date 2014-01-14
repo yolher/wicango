@@ -38,12 +38,6 @@ if (isset($_GET["search"])!=0 && isset($_GET["key"])!=0) {
 			
 			break;
 	}
-
-	
-
-
-
-	
 }else{
 	echo "Estas ingresando ilegalmente";
 }
