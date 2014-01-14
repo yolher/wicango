@@ -7,15 +7,20 @@ var urlProcess = urlRequest+"server/process.php";//ruta de directorio donde se h
 $(document).on("ready",function(){
 	
 //=========================== controla el campo de la busqueda ====================
-			$('input#into').typeWatch({
-				callback: function(value) {
-					var key = $("input#into").attr("id");//obtenemos el id del campo de busquda	
-					var search = value;//selecciona el contenido del campo de busqueda	
-				getSearch(search,urlProcess,urlRequest,key);
-				//console.log(search+key);
-				}
-			}); 
-	//=================================================================================
+	if ($("#principal").length) { runing();	};//=== llama la funcion running si se encuentra en la pagina principal
+
+	function runing(){
+		$('input#into').typeWatch({
+			callback: function(value) {
+				var key = $("input#into").attr("id");//obtenemos el id del campo de busquda	
+				var search = value;//selecciona el contenido del campo de busqueda
+				console.log(search);	
+			getSearch(search,urlProcess,urlRequest,key);
+					//console.log(search+key);
+			}
+		}); 
+	}
+//=================================================================================
 });
 
 
