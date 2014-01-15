@@ -297,11 +297,17 @@ textarea.ui-input-text
 
 @media screen and (max-width: 320px){    
 		#estado{
-			font-size: 12px;
+			font-size: 14px;
+			text-align: center;
 		}
 		#loading img
 		{
-			width: 130px;
+			text-align: center;
+			width: 150px;
+		}
+		.grid2{
+			display: block;
+			width: 100%;
 		}
 }
 	

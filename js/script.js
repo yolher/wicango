@@ -31,7 +31,7 @@ function getSearch(search,urlProcess,urlRequest,key){
 	$.ajax({
 		beforeSend: function(){
 			$("#loading img").fadeIn(300);
-			$("#estado").html("Resultados "+search);
+			$("#estado").html("Resultados para: "+search);
 		},// ejecuta una opcion antes de hacer la peticion
 		type: "GET",// metodo por el cual se envian los paramentros
 		data: {search:search,key:key,urlRequest:urlRequest},// parametros a enviar como objeto json
