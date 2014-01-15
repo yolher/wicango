@@ -29,7 +29,10 @@ $(document).on("ready",function(){
 function getSearch(search,urlProcess,urlRequest,key){
 	// metodo ajax para peticion de datos al servidor
 	$.ajax({
-		beforeSend: function(){},// ejecuta una opcion antes de hacer la peticion
+		beforeSend: function(){
+			$("#loading img").fadeIn(300);
+			$("#estado").html("Resultados para "+search);
+		},// ejecuta una opcion antes de hacer la peticion
 		type: "GET",// metodo por el cual se envian los paramentros
 		data: {search:search,key:key,urlRequest:urlRequest},// parametros a enviar como objeto json
 		url: urlProcess,// url donde se realizara el proceso de busqueda
@@ -54,7 +57,7 @@ function getSearch(search,urlProcess,urlRequest,key){
 			$("#resultado").html(obj.join(""));
 		},
 		complete: function(){
-			//console.log("fin");
+			$("#loading img").fadeOut(300);
 		}
 	});
 }

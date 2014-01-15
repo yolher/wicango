@@ -36,11 +36,24 @@
         <div data-role="content">
             <div id="contbus">
                 <input id="into" type="text" placeholder="Que desea buscar?">
-            </div>
-
+            </div>           
+            
+            
            <div id="contResult">
-               <div id="resultado"></div>
+
+                <div class="grid1">
+                    <div class="grid2">
+                        <div id="estado"></div><!-- Cargando palabra a buscar -->
+                    </div>
+                    <div class="grid2">
+                        <div id="loading"><img src="images/loading.gif" alt="loading"></div><!-- Cargando resultado -->
+                    </div>
+                </div>
+
+               <div id="resultado"></div><!-- Resultado de la busqueda -->
+
            </div>
+
         </div><!-- /content -->
          
         </div>   
