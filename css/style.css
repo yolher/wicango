@@ -264,6 +264,23 @@ textarea.ui-input-text
 		   
 		}
 }
+
+@media screen and (max-width: 550px){    
+		#estado{
+			font-size: 14px;
+			text-align: center;
+		}
+		#loading img
+		{
+			text-align: center;
+			width: 150px;
+		}
+		.grid2{
+			display: block;
+			width: 100%;
+		}
+}
+
 @media screen and (max-width: 450px){ 
 	.sesion
 		{
@@ -295,21 +312,7 @@ textarea.ui-input-text
 		}
 }
 
-@media screen and (max-width: 320px){    
-		#estado{
-			font-size: 14px;
-			text-align: center;
-		}
-		#loading img
-		{
-			text-align: center;
-			width: 150px;
-		}
-		.grid2{
-			display: block;
-			width: 100%;
-		}
-}
+
 	
 
 
